@@ -6,10 +6,10 @@ using Xunit;
 
 namespace Lab.UnitTests
 {
-    public class UnitTest1
+    public class OrderValidatorTest
     {
         private readonly OrderValidator _orderValidator;
-        public UnitTest1()
+        public OrderValidatorTest()
         {
             _orderValidator = new OrderValidator();
         }
