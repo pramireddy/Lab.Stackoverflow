@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.GraphDb", "..\Lab.Graph
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.UnitTests", "Lab.UnitTests\Lab.UnitTests.csproj", "{8C3C8E49-BB6E-438A-85F2-531CD4F23A17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Cascading.DropdownList", "Lab.Cascading.DropdownList\Lab.Cascading.DropdownList.csproj", "{AF10C926-B0D3-4CCA-B249-DD7BC972F786}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.Cascading.DropdownList", "Lab.Cascading.DropdownList\Lab.Cascading.DropdownList.csproj", "{AF10C926-B0D3-4CCA-B249-DD7BC972F786}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Cascading.Mvc.DropdownList", "Lab.Cascading.Mvc.DropdownList\Lab.Cascading.Mvc.DropdownList.csproj", "{B46DBF6B-62B1-4D26-947C-CCC16CC7AA53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.Cascading.Mvc.DropdownList", "Lab.Cascading.Mvc.DropdownList\Lab.Cascading.Mvc.DropdownList.csproj", "{B46DBF6B-62B1-4D26-947C-CCC16CC7AA53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.AzureKeyVault101", "Lab.AzureKeyVault101\Lab.AzureKeyVault101.csproj", "{48E3D194-9260-4444-A0EA-4370F46D6FCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{B46DBF6B-62B1-4D26-947C-CCC16CC7AA53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B46DBF6B-62B1-4D26-947C-CCC16CC7AA53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B46DBF6B-62B1-4D26-947C-CCC16CC7AA53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E3D194-9260-4444-A0EA-4370F46D6FCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E3D194-9260-4444-A0EA-4370F46D6FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E3D194-9260-4444-A0EA-4370F46D6FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E3D194-9260-4444-A0EA-4370F46D6FCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
