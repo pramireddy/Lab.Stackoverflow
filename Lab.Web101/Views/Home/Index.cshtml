@@ -1,0 +1,46 @@
+﻿@model Lab.Web101.Models.Employee
+
+@{
+    ViewData["Title"] = "Submit form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Request</h1>
+
+@if (ViewBag.Check == null)
+{
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstName)
+            @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+
+            @Html.LabelFor(model => model.LastName)
+            @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+        </div>
+
+        <input type="submit" value="Post comment" />
+    }
+}
+else
+{
+    <table class="table table-bordered table-sm">
+        <thead class="thead-light">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>
+                    @Model.FirstName
+                </td>
+                <td>
+                    @Model.LastName
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}
