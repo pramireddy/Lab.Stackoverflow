@@ -3,173 +3,43 @@
 @model Lab.Cascading.Mvc.DropdownList.Models.Category
 @{
 
-    <form asp-controller="Demo" asp-action="Index" method="post" class="form-inline" role="form">
+    <form asp-controller="Demo" asp-action="Index" method="post" role="form">
 
-        <div class="form-group mb-2">
-            <div class="row">
-                <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
-                @*<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">*@
-                    <label asp-for="CategoryName" class="control-label"></label>
-                    <select asp-for="CategoryID"
-                            class="form-control"
-                            asp-items="@(new SelectList(@ViewBag.ListofCategory,"CategoryID", "CategoryName"))"></select>
-                @*</div>*@
+        <div class="row">
+            <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                <label asp-for="CategoryName" class="control-label"></label>
+                <select asp-for="CategoryID"
+                        class="form-control"
+                        asp-items="@(new SelectList(@ViewBag.ListofCategory,"CategoryID", "CategoryName"))"></select>
             </div>
-        </div>
 
-        <div class="form-group mb-2">
-            <div class="row">
-                @*<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">*@
-                    <label class="control-label">SubCategoryName</label>
-                    <select class="form-control" id="SubCategoryID" name="SubCategoryID" asp-for="SubCategoryID"
-                            asp-items="@(new SelectList(string.Empty,"SubCategoryID", "SubCategoryName"))"></select>
-                @*</div>*@
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                <label class="control-label">SubCategoryName</label>
+                <select class="form-control" id="SubCategoryID" name="SubCategoryID" asp-for="SubCategoryID"
+                        asp-items="@(new SelectList(string.Empty,"SubCategoryID", "SubCategoryName"))"></select>
             </div>
-        </div>
 
-        <div class="form-group mb-2">
-            <div class="row">
-                @*<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">*@
-                    <label class="control-label">ProductName</label>
-                    <select class="form-control" id="ProductID" name="ProductID" asp-for="ProductID"
-                            asp-items="@(new SelectList(string.Empty,"ProductID", "ProductName"))"></select>
-                @*</div>*@
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                <label class="control-label">ProductName</label>
+                <select class="form-control" id="ProductID" name="ProductID" asp-for="ProductID"
+                        asp-items="@(new SelectList(string.Empty,"ProductID", "ProductName"))"></select>
             </div>
-        </div>
 
-        <div class="form-group mb-2">
-            <div class="row">
-                @*<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">*@
-                    <input id="Submit" type="Submit" value="Submit" />
-                </div>
-            @*</div>*@
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                <input id="Submit" type="Submit" value="Submit"  style="margin-top: 10px;" />
+            </div>
+
         </div>
     </form>
 
-    <hr />
-
-    <table class="table">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@@twitter</td>
-            </tr>
-        </tbody>
-    </table>
 }
+
 @section Scripts {
-    <script type="text/javascript">
-
-    $(document).ready(function () {
-    var items = "<option value='0'>Select</option>";
-    $('#SubCategoryID').html(items);
-    $('#ProductID').html(items);
-    });
-
-    $('#CategoryID').change(function () {
-    var url = '@Url.Content("~/")' + "Demo/GetSubCategory";
-    var ddlsource = "#CategoryID";
-    $.getJSON(url, { CategoryID: $(ddlsource).val() }, function (data) {
-    var items = '';
-    $("#SubCategoryID").empty();
-    $.each(data, function (i, subcategory) {
-    items += "<option value='" + subcategory.value + "'>" + subcategory.text + "</option>";
-    });
-    $('#SubCategoryID').html(items);
-    });
-    });
-
-    $('#SubCategoryID').change(function () {
-    var url = '@Url.Content("~/")' + "Demo/GetProducts";
-    var ddlsource = "#SubCategoryID";
-    $.getJSON(url, { SubCategoryID: $(ddlsource).val() }, function (data) {
-    var items = '';
-    $('#ProductID').empty();
-    $.each(data, function (i, product) {
-    items += "<option value='" + product.value + "'>" + product.text + "</option>";
-    });
-    $('#ProductID').html(items);
-    });
-    });
+    <script>
+        var pirates = "@ViewBag.Test";
+        console.log(pirates);
     </script>
-
+    <script src="~/js/demo.js" asp-append-version="true"></script>
 }
-@*<script src="/lib/jquery/dist/jquery.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var items = "<option value='0'>Select</option>";
-            $('#SubCategoryID').html(items);
-            $('#ProductID').html(items);
-        });
-    </script>*@
-
-@*<script type="text/javascript">
-            $(document).ready(function () {
-                $('#CategoryID').change(function () {
-                    var url = '@Url.Content("~/")' + "Demo/GetSubCategory";
-                    var ddlsource = "#CategoryID";
-                    $.getJSON(url, { CategoryID: $(ddlsource).val() }, function (data) {
-                        var items = '';
-                        $("#SubCategoryID").empty();
-                        $.each(data, function (i, subcategory) {
-                            items += "<option value='" + subcategory.value + "'>" + subcategory.text + "</option>";
-                        });
-                        $('#SubCategoryID').html(items);
-                    });
-                });
-
-                $('#SubCategoryID').change(function () {
-                    var url = '@Url.Content("~/")' + "Demo/GetProducts";
-                    var ddlsource = "#SubCategoryID";
-                    $.getJSON(url, { SubCategoryID: $(ddlsource).val() }, function (data) {
-                        var items = '';
-                        $('#ProductID').empty();
-                        $.each(data, function (i, product) {
-                            items += "<option value='" + product.value + "'>" + product.text + "</option>";
-                        });
-                        $('#ProductID').html(items);
-                    });
-                });
-            });
-    </script>*@
-
-@*<div class="row">
-        <div class="col-md-4">
-            <form asp-action="Edit" class="row">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="ProductId" />
-                <div class="form-group col-md-4">
-                    <label asp-for="ProductName" class="control-label"></label>
-                    <input asp-for="ProductName" class="form-control" />
-                    <span asp-validation-for="ProductName" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-4">
-                    <label asp-for="Quantity" class="control-label"></label>
-                    <input asp-for="Quantity" class="form-control" />
-                    <span asp-validation-for="Quantity" class="text-danger"></span>
-                </div>
-            </form>
-        </div>
-    </div>*@

@@ -27,11 +27,9 @@ namespace MVCCore1.Controllers
             _categorylist.Insert(0, new Category { CategoryID = 0, CategoryName = "Select" });
 
             ViewBag.ListofCategory = _categorylist;
+            ViewBag.Test = "Test123";
             return View();
         }
-
-
-
 
         [HttpPost]
         public IActionResult Index(Category objcategory, IFormCollection formCollection)
