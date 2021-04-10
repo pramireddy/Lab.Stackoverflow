@@ -1,0 +1,11 @@
+﻿@model Lab.Web101.Models.CountryViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<form asp-controller="SelectTag" asp-action="Index" method="post">
+    <select asp-for="CountryCodes" asp-items="Model.Countries"></select>
+    <br /><button type="submit">Register</button>
+</form>

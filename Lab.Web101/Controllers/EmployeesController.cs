@@ -18,6 +18,8 @@ namespace Lab.Web101.Controllers
         // GET: Employees
         public async Task<IActionResult> Index()
         {
+            var employees = _context.Employees.FromSqlRaw<Employee>("SELECT * FROM Employess").ToList();
+
             return View(await _context.Employees.ToListAsync());
         }
 

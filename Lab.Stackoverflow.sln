@@ -23,7 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.Cascading.Mvc.DropdownL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.AzureKeyVault101", "Lab.AzureKeyVault101\Lab.AzureKeyVault101.csproj", "{48E3D194-9260-4444-A0EA-4370F46D6FCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Web101", "Lab.Web101\Lab.Web101.csproj", "{20CAC681-5D80-4690-973C-A124BF3FB361}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.Web101", "Lab.Web101\Lab.Web101.csproj", "{20CAC681-5D80-4690-973C-A124BF3FB361}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.Efcore.DatabaseFirst", "Lab.Efcore.DatabaseFirst\Lab.Efcore.DatabaseFirst.csproj", "{FA39AFCD-6996-4828-8DCD-6A26AB457D14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Linq101", "Lab.Linq101\Lab.Linq101.csproj", "{C2C787C2-0FDB-4C06-9FA9-FD13BCBBDAEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,14 @@ Global
 		{20CAC681-5D80-4690-973C-A124BF3FB361}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20CAC681-5D80-4690-973C-A124BF3FB361}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20CAC681-5D80-4690-973C-A124BF3FB361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA39AFCD-6996-4828-8DCD-6A26AB457D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA39AFCD-6996-4828-8DCD-6A26AB457D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA39AFCD-6996-4828-8DCD-6A26AB457D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA39AFCD-6996-4828-8DCD-6A26AB457D14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2C787C2-0FDB-4C06-9FA9-FD13BCBBDAEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C787C2-0FDB-4C06-9FA9-FD13BCBBDAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C787C2-0FDB-4C06-9FA9-FD13BCBBDAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C787C2-0FDB-4C06-9FA9-FD13BCBBDAEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

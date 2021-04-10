@@ -1,7 +1,5 @@
 ﻿using Lab.Stackoverflow.EfCodeFirst;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +11,41 @@ namespace Lab.ConsoleApp
     {
         private static async Task Main(string[] args)
         {
-            var  cdn = "https://dev-cdn.nationalcareersservice.org.uk/";
-            var cdn1 = "https://dev-cdn.nationalcareersservice.org.uk";
-            var testcdn = cdn.TrimEnd('/');
-            var testcdn1 = cdn.TrimEnd('/');
-            Console.WriteLine(cdn);
-            Console.WriteLine(testcdn);
-            Console.WriteLine(cdn1);
-            Console.WriteLine(testcdn1);
+
+
+
+            //IList<int> numbers = new List<int>
+            //{
+            //     1, 2, 4, 7, 8, 16, 29, 32, 64, 128
+            //};
+
+            //IList<int> filterNumbers = new List<int> { 7, 29 };
+
+            //var result = numbers.Where(x => filterNumbers.Contains(x));
+
+            //Console.WriteLine (string.Join(",", result.Select(n => n.ToString()).ToArray()));
+
+            // Group By
+            //https://docs.microsoft.com/en-us/dotnet/csharp/linq/group-query-results
+            // https://stackoverflow.com/questions/27130492/group-a-datatable-and-copy-to-another-table-c-sharp
+
+            //var students = StudentRepository.GetStudents();
+
+            //IOrderedEnumerable<IGrouping<string, Student>> queryLastNames = from student in students
+            //                        group student by student.LastName into newGroup
+            //                        orderby newGroup.Key
+            //                        select newGroup;
+
+            //var t = students.Count;
+
+            //var  cdn = "https://dev-cdn.nationalcareersservice.org.uk/";
+            //var cdn1 = "https://dev-cdn.nationalcareersservice.org.uk";
+            //var testcdn = cdn.TrimEnd('/');
+            //var testcdn1 = cdn.TrimEnd('/');
+            //Console.WriteLine(cdn);
+            //Console.WriteLine(testcdn);
+            //Console.WriteLine(cdn1);
+            //Console.WriteLine(testcdn1);
 
             //var jsonString = "{\"Id\":\"6c6ecbd5-11d3-45c7-bbfd-b895c67cb6b7\",\"Subject\":\"/content/sharedcontent/c3209801-aaa7-4afa-8755-e8daefc29a03\",\"Data\":{\"Api\":\"http://localhost:7071/api/execute/sharedcontent/c3209801-aaa7-4afa-8755-e8daefc29a03\",\"ItemId\":\"c3209801-aaa7-4afa-8755-e8daefc29a03\",\"VersionId\":\"4mby65rkymj95330fjryf2qrdy\",\"DisplayText\":\"Test321\",\"ContentType\":\"SharedContent\",\"Author\":\"admin\",\"TraceId\":\"9d955cfcb93c9d4bb133a2db70cc8189\",\"ParentId\":\"90b8fffddc985442\"},\"EventType\":\"published\",\"EventTime\":\"2021-02-09T18:27:19.6220731Z\",\"MetadataVersion\":null,\"DataVersion\":\"1.0\"}";
             //var jsonString1 = "{\"Id\":\"514c6dce-1df7-413d-9e8c-04e943296a63\",\"Subject\":\"/content/sharedcontent/6e0ce4f1-721f-4440-aadc-6c62f0eb6625\",\"Data\":{\"Api\":\"http://localhost:7071/api/execute/sharedcontent/6e0ce4f1-721f-4440-aadc-6c62f0eb6625\",\"ItemId\":\"6e0ce4f1-721f-4440-aadc-6c62f0eb6625\",\"VersionId\":\"4byyxpw2nbskh75bmqca0y2x4x\",\"DisplayText\":\"Test App Pages Locally\",\"ContentType\":\"SharedContent\",\"Author\":\"admin\",\"TraceId\":\"a2acaea69ec7ec48a9d4938572408e93\",\"ParentId\":\"5cf38c771e814a4c\"},\"EventType\":\"published\",\"EventTime\":\"2021-02-09T18:44:45.0131976Z\",\"MetadataVersion\":null,\"DataVersion\":\"1.0\"}";
@@ -56,7 +81,7 @@ namespace Lab.ConsoleApp
             //        Name = "bearer3",
             //        //Gds = await dbContext.Gd.ToListAsync()
             //        Gds = gds
-            //    } 
+            //    }
             //};
 
             //await dbContext.AddRangeAsync(br);
