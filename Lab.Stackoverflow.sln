@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.Web101", "Lab.Web101\La
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.Efcore.DatabaseFirst", "Lab.Efcore.DatabaseFirst\Lab.Efcore.DatabaseFirst.csproj", "{FA39AFCD-6996-4828-8DCD-6A26AB457D14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Linq101", "Lab.Linq101\Lab.Linq101.csproj", "{C2C787C2-0FDB-4C06-9FA9-FD13BCBBDAEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.Linq101", "Lab.Linq101\Lab.Linq101.csproj", "{C2C787C2-0FDB-4C06-9FA9-FD13BCBBDAEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Auth.WebApi", "Lab.Auth.WebApi\Lab.Auth.WebApi.csproj", "{6B6CA0A6-B8C5-4B40-9FEC-8103E7F41BD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{C2C787C2-0FDB-4C06-9FA9-FD13BCBBDAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2C787C2-0FDB-4C06-9FA9-FD13BCBBDAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2C787C2-0FDB-4C06-9FA9-FD13BCBBDAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B6CA0A6-B8C5-4B40-9FEC-8103E7F41BD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B6CA0A6-B8C5-4B40-9FEC-8103E7F41BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B6CA0A6-B8C5-4B40-9FEC-8103E7F41BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B6CA0A6-B8C5-4B40-9FEC-8103E7F41BD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
