@@ -1,0 +1,24 @@
+﻿@model Lab.Razor.WebApplication.Models.TestUser
+
+<div class="col-md-4">
+    <table class="table table-bordered table-sm">
+        <thead class="thead-light">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>
+                    @Model.FirstName
+                </td>
+                <td>
+                    @Model.LastName
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
