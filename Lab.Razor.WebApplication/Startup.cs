@@ -8,6 +8,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Lab.Razor.WebApplication.Data;
+
+//https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/model?view=aspnetcore-5.0&tabs=visual-studio
 
 namespace Lab.Razor.WebApplication
 {
@@ -24,6 +28,9 @@ namespace Lab.Razor.WebApplication
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            services.AddDbContext<LabRazorWebApplicationContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("LabRazorWebApplicationContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

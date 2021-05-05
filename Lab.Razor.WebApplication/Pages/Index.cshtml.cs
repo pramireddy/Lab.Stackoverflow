@@ -1,11 +1,8 @@
 ﻿using Lab.Razor.WebApplication.Models;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Lab.Razor.WebApplication.Pages
 {
@@ -20,21 +17,26 @@ namespace Lab.Razor.WebApplication.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public void OnGet(int? id)
         {
-            TestUsers = new List<TestUser>
-            { 
-                new TestUser { FirstName = "T1", LastName = "T2" },
-                new TestUser { FirstName = "T1", LastName = "T2" },
-                new TestUser { FirstName = "T1", LastName = "T2" },
-                new TestUser { FirstName = "T1", LastName = "T2" },
-                new TestUser { FirstName = "T1", LastName = "T2" },
-                new TestUser { FirstName = "T1", LastName = "T2" },
-                new TestUser { FirstName = "T1", LastName = "T2" }
-
+            var users = new List<TestUser>
+            {
+                new TestUser { FirstName = "T1", LastName = "T2",Level=2 },
+                new TestUser { FirstName = "T1", LastName = "T2", Level = 3 },
+                new TestUser { FirstName = "T1", LastName = "T2",Level = 4 },
+                new TestUser { FirstName = "T1", LastName = "T2" , Level = 5},
+                new TestUser { FirstName = "T1", LastName = "T2", Level = 6 },
+                new TestUser { FirstName = "T1", LastName = "T2", Level = 7 },
+                new TestUser { FirstName = "T1", LastName = "T2", Level = 8}
             };
+            if (id == null)
+            {
+                TestUsers = users.Take(1); ;
+            }
+            else
+            {
+                TestUsers = users.Take((int)id);
+            }
         }
-
-       
     }
 }
