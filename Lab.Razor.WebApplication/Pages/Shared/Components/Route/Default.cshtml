@@ -1,4 +1,4 @@
-﻿@model Lab.Razor.WebApplication.Models.TestUser
+﻿@model IEnumerable<Razor.WebApplication.Models.TestUser>
 
 <div class="col-md-4">
     <table class="table table-bordered table-sm">
@@ -10,18 +10,20 @@
             </tr>
         </thead>
         <tbody>
-
+            @foreach (var user in Model)
+            {
             <tr>
                 <td>
-                    @Model.FirstName
+                    @user.FirstName
                 </td>
                 <td>
-                    @Model.LastName
+                    @user.LastName
                 </td>
                 <td>
-                    <a asp-page="./Index" asp-route-id=@Model.Level>Add</a>
+                    <a asp-page="./Index" asp-route-id=@user.Level>Add</a>
                 </td>
             </tr>
+            }
         </tbody>
     </table>
 </div>

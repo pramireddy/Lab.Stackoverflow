@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.Linq101", "Lab.Linq101\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.Auth.WebApi", "Lab.Auth.WebApi\Lab.Auth.WebApi.csproj", "{6B6CA0A6-B8C5-4B40-9FEC-8103E7F41BD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Razor.WebApplication", "Lab.Razor.WebApplication\Lab.Razor.WebApplication.csproj", "{DC7A42EF-FF64-47A8-BE80-9947AE21608C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab.Razor.WebApplication", "Lab.Razor.WebApplication\Lab.Razor.WebApplication.csproj", "{DC7A42EF-FF64-47A8-BE80-9947AE21608C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Serverless.FunctionApp", "Lab.Serverless.FunctionApp\Lab.Serverless.FunctionApp.csproj", "{2CE4EFDB-C9F3-415D-8AEE-CC93BB6F89F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{DC7A42EF-FF64-47A8-BE80-9947AE21608C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC7A42EF-FF64-47A8-BE80-9947AE21608C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC7A42EF-FF64-47A8-BE80-9947AE21608C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CE4EFDB-C9F3-415D-8AEE-CC93BB6F89F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE4EFDB-C9F3-415D-8AEE-CC93BB6F89F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE4EFDB-C9F3-415D-8AEE-CC93BB6F89F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE4EFDB-C9F3-415D-8AEE-CC93BB6F89F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

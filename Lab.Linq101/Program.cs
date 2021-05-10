@@ -14,23 +14,31 @@ namespace Lab.Linq101
         public static void Main(string[] args)
         {
 
-            var rows = GetDataTable();
+            //var rows = GetDataTable();
 
-            string JSONresult;
-            JSONresult = JsonConvert.SerializeObject(GetDataTable());
+            //string JSONresult;
+            //JSONresult = JsonConvert.SerializeObject(GetDataTable());
 
 
-            DataClass dataClass = new DataClass();
+            //DataClass dataClass = new DataClass();
 
-            var dynamicObject = dataClass.CreateDataClass();
+            //var dynamicObject = dataClass.CreateDataClass();
 
-            //TestGroupBy();
-            foreach (var item in dynamicObject)
-            {
-                Console.WriteLine();
-            }
+            ////TestGroupBy();
+            //foreach (var item in dynamicObject)
+            //{
+            //    Console.WriteLine();
+            //}
+            Console.WriteLine("Please enter a number");
+            int number = Convert.ToInt32(Console.ReadLine());
+            Fibonacci(0,1,1,number);
+            //Console.ReadLine();
+        }
 
-            Console.ReadLine();
+        private static void Fibonacci(int a, int b, int counter,int number)
+        {
+            Console.WriteLine(a);
+            if (counter < number) Fibonacci(b, a + b, counter + 1, number);
         }
 
         private static void TestGroupBy()
